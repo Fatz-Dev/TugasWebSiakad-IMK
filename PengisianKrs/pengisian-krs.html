@@ -1,0 +1,1710 @@
+<!doctype html>
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Pengisian KRS - UIN Ar-Raniry</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#26A69A", // Updated primary color to blue as requested
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                            "neutral-100": "#f0f2f4",
+                            "neutral-200": "#dbe0e6",
+                            "neutral-700": "#617589",
+                            "neutral-900": "#111418",
+                            accent: "#FFD700",
+                            success: "#28a745",
+                            warning: "#ffc107",
+                            danger: "#dc3545",
+                        },
+                        fontFamily: {
+                            display: ["Manrope", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                font-family: "Manrope", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-background-light dark:bg-background-dark font-display">
+        <div class="flex min-h-screen w-full flex-col">
+            <header
+                class="sticky top-0 z-20 w-full bg-primary text-white shadow-md"
+            >
+                <div class="container mx-auto px-4">
+                    <div class="flex h-20 items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 bg-white p-1"
+                                data-alt="Logo UIN Ar-Raniry"
+                                style="
+                                    background-image: url(https://assets.siakadcloud.com/uploads/uinarraniry/logoaplikasi/1498.jpg);
+                                "
+                            ></div>
+                            <div>
+                                <p class="text-sm font-semibold">
+                                    SIM Akademik
+                                </p>
+                                <h1 class="text-lg font-bold">
+                                    UIN Ar-Raniry Banda Aceh
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <button
+                                class="relative rounded-full p-2 hover:bg-white/10"
+                            >
+                                <span class="material-symbols-outlined"
+                                    >notifications</span
+                                >
+                            </button>
+                            <button
+                                class="flex items-center gap-2 rounded-full p-1 pr-3 hover:bg-white/10"
+                            >
+                                <div
+                                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8"
+                                    data-alt="Foto profil Aisyah Humaira"
+                                    style="
+                                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDtssAvcsydxr_YXtC4O_XuolmS23AfkcgitJ79eBx2VOJsOZxhOr1wX0-Ksi64Uztlb3z8J9FW8KiVumV_I_qku6HhM4kzEdFHg5AfmcuqHm0c80JMLKswSj8nnGRO7-wpkjaH00PDNU3FNDyjieaz6uQGdSdoy_p-CV6EafyJ7Dua4jBblvwRJb7BgI-WBWaDZ-dkaHzTpaox7QipyGeoKB1h99owCYulC1VQu1UxPk1mK1mBRMhfJ7uQfKfI61c3SfJlLvSR7I5C);
+                                    "
+                                ></div>
+                                <span class="font-semibold hidden sm:block"
+                                    >Al-Fatih</span
+                                >
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >expand_more</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="flex h-12 items-center">
+                        <ul
+                            class="flex items-center gap-1 text-sm font-semibold"
+                        >
+                            <li>
+                                <a
+                                    class="flex items-center px-4 py-2 rounded-md hover:bg-white/10"
+                                    href="dashboard.html"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Jadwal
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Jadwal</div>
+                                    <a href="jadwal/jadwal-kuliah.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">event</span>
+                                        <div>
+                                            <div class="font-medium">Jadwal Kuliah</div>
+                                            <div class="text-xs text-white/60">Lihat jadwal perkuliahan</div>
+                                        </div>
+                                    </a>
+                                    <a href="jadwal/jadwal-ujian.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">quiz</span>
+                                        <div>
+                                            <div class="font-medium">Jadwal Ujian</div>
+                                            <div class="text-xs text-white/60">Lihat jadwal ujian</div>
+                                        </div>
+                                    </a>
+                                    <a href="jadwal/kalender-akademik.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">calendar_month</span>
+                                        <div>
+                                            <div class="font-medium">Kalender Akademik</div>
+                                            <div class="text-xs text-white/60">Periksa kegiatan perkuliahan</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Akademik
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Akademik</div>
+                                    <a href="PengisianKrs/pengisian-krs.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">edit_note</span>
+                                        <div>
+                                            <div class="font-medium">Pengisian KRS</div>
+                                            <div class="text-xs text-white/60">Isi kartu rencana studi</div>
+                                        </div>
+                                    </a>
+                                    <a href="PengisianKrs/lihat-krs.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">description</span>
+                                        <div>
+                                            <div class="font-medium">Lihat KRS</div>
+                                            <div class="text-xs text-white/60">Lihat KRS yang diajukan</div>
+                                        </div>
+                                    </a>
+                                    <a href="hasil-studi/khs-persemester.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">assessment</span>
+                                        <div>
+                                            <div class="font-medium">KHS</div>
+                                            <div class="text-xs text-white/60">Kartu hasil studi</div>
+                                        </div>
+                                    </a>
+                                    <a href="hasil-studi/transkrip.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">article</span>
+                                        <div>
+                                            <div class="font-medium">Transkrip Nilai</div>
+                                            <div class="text-xs text-white/60">Lihat transkrip nilai</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Tingkat Akhir
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Tingkat Akhir</div>
+                                    <a href="tingkatAkhir/skripsi.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">school</span>
+                                        <div>
+                                            <div class="font-medium">Skripsi</div>
+                                            <div class="text-xs text-white/60">Pengajuan skripsi</div>
+                                        </div>
+                                    </a>
+                                    <a href="tingkatAkhir/seminar-proposal.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">present_to_all</span>
+                                        <div>
+                                            <div class="font-medium">Seminar Proposal</div>
+                                            <div class="text-xs text-white/60">Jadwal seminar proposal</div>
+                                        </div>
+                                    </a>
+                                    <a href="tingkatAkhir/sidang.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">verified</span>
+                                        <div>
+                                            <div class="font-medium">Sidang</div>
+                                            <div class="text-xs text-white/60">Sidang akhir</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Hasil Studi
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Hasil Studi</div>
+                                    <a href="hasil-studi/khs-persemester.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">summarize</span>
+                                        <div>
+                                            <div class="font-medium">KHS Per Semester</div>
+                                            <div class="text-xs text-white/60">Kartu hasil studi per semester</div>
+                                        </div>
+                                    </a>
+                                    <a href="hasil-studi/transkrip.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">receipt_long</span>
+                                        <div>
+                                            <div class="font-medium">Transkrip</div>
+                                            <div class="text-xs text-white/60">Transkrip nilai keseluruhan</div>
+                                        </div>
+                                    </a>
+                                    <a href="hasil-studi/ipk.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">workspace_premium</span>
+                                        <div>
+                                            <div class="font-medium">IPK</div>
+                                            <div class="text-xs text-white/60">Indeks prestasi kumulatif</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="flex-1 flex-col">
+                <div class="p-8 space-y-6">
+                    <div class="flex flex-col gap-1">
+                        <p
+                            class="text-neutral-900 dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]"
+                        >
+                            Pengisian Kartu Rencana Studi (KRS)
+                        </p>
+                        <p
+                            class="text-neutral-700 dark:text-neutral-200/80 text-base font-normal leading-normal"
+                        >
+                            Pilih mata kuliah yang akan Anda ambil pada semester
+                            ini.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-4 bg-white dark:bg-neutral-900/50 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700/50"
+                    >
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="material-symbols-outlined text-primary dark:text-blue-400 text-3xl"
+                                >calendar_month</span
+                            >
+                            <div>
+                                <h2
+                                    class="text-sm font-medium text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    Periode Akademik
+                                </h2>
+                                <p
+                                    class="text-base font-bold text-neutral-900 dark:text-white"
+                                >
+                                    Ganjil 2023/2024
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center md:text-left"
+                        >
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    Beban SKS Maks.
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    24
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    SKS Diambil
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    14
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    IP Semester Lalu
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    3.85
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    IP Kumulatif
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    3.72
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div
+                            class="border-b border-neutral-200 dark:border-neutral-700"
+                        >
+                            <nav
+                                aria-label="Tabs"
+                                class="-mb-px flex space-x-6"
+                            >
+                                <a
+                                    class="border-primary dark:border-blue-400 text-primary dark:text-blue-400 whitespace-nowrap py-3 px-1 border-b-2 font-bold text-sm"
+                                    href="pengisian-krs.html"
+                                    >Pilih Kelas</a
+                                >
+                                <a
+                                    class="border-transparent text-neutral-700 hover:text-neutral-900 hover:border-neutral-300 dark:text-neutral-200/80 dark:hover:text-white dark:hover:border-neutral-500 whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm"
+                                    href="krs-tersimpan.html"
+                                    >KRS Tersimpan</a
+                                >
+                            </nav>
+                        </div>
+                        <div class="mt-6">
+                            <div
+                                class="hidden bg-white dark:bg-neutral-900/50 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700/50 overflow-hidden"
+                            >
+                                <div
+                                    class="p-6 border-b border-neutral-100 dark:border-neutral-700/50"
+                                >
+                                    <h3
+                                        class="text-lg font-bold text-neutral-900 dark:text-white"
+                                    >
+                                        Mata Kuliah yang Dipilih (14 SKS)
+                                    </h3>
+                                    <p
+                                        class="text-sm text-neutral-700 dark:text-neutral-200/80"
+                                    >
+                                        Berikut adalah daftar mata kuliah yang
+                                        telah Anda tambahkan ke KRS.
+                                    </p>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-sm text-left text-neutral-700 dark:text-neutral-200/80"
+                                    >
+                                        <thead
+                                            class="text-xs text-neutral-700 dark:text-neutral-200/80 uppercase bg-neutral-100/50 dark:bg-neutral-900"
+                                        >
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Kode MK
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Nama Mata Kuliah
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3 text-center"
+                                                    scope="col"
+                                                >
+                                                    SKS
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Jadwal &amp; Ruang
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Status
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Aksi
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                class="border-b border-neutral-100 dark:border-neutral-700/50"
+                                            >
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    INF301
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    Pemrograman Web Lanjutan
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-center"
+                                                >
+                                                    3
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    Senin, 10:00-12:30 (R. Lab
+                                                    SI)
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <span
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success"
+                                                        >Disetujui</span
+                                                    >
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <button
+                                                        class="text-danger hover:underline font-medium"
+                                                    >
+                                                        Batal
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="border-b border-neutral-100 dark:border-neutral-700/50"
+                                            >
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    INF302
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    Kecerdasan Buatan
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-center"
+                                                >
+                                                    3
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    Selasa, 08:00-10:30 (R. 3.1)
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <span
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success"
+                                                        >Disetujui</span
+                                                    >
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <button
+                                                        class="text-danger hover:underline font-medium"
+                                                    >
+                                                        Batal
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="border-b border-neutral-100 dark:border-neutral-700/50"
+                                            >
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    INF303
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    Jaringan Komputer
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-center"
+                                                >
+                                                    3
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    Rabu, 13:00-15:30 (R.
+                                                    Jarkom)
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <span
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-warning/10 text-warning"
+                                                        >Menunggu</span
+                                                    >
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <button
+                                                        class="text-danger hover:underline font-medium"
+                                                    >
+                                                        Batal
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="border-b border-neutral-100 dark:border-neutral-700/50"
+                                            >
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    INF304
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    Manajemen Proyek TI
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-center"
+                                                >
+                                                    2
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    Kamis, 10:00-11:40 (R. 3.2)
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <span
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success"
+                                                        >Disetujui</span
+                                                    >
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <button
+                                                        class="text-danger hover:underline font-medium"
+                                                    >
+                                                        Batal
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    INF305
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 font-medium text-neutral-900 dark:text-white"
+                                                >
+                                                    Kerja Praktik
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-center"
+                                                >
+                                                    3
+                                                </td>
+                                                <td class="px-6 py-4">-</td>
+                                                <td class="px-6 py-4">
+                                                    <span
+                                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-danger/10 text-danger"
+                                                        >Ditolak</span
+                                                    >
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <button
+                                                        class="text-danger hover:underline font-medium"
+                                                    >
+                                                        Batal
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div
+                                    class="p-6 bg-neutral-100/50 dark:bg-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4"
+                                >
+                                    <div
+                                        class="text-sm text-neutral-700 dark:text-neutral-200/80"
+                                    >
+                                        <p>
+                                            <span class="font-bold"
+                                                >Perhatian:</span
+                                            >
+                                            Setelah finalisasi, KRS tidak dapat
+                                            diubah kembali. Pastikan pilihan
+                                            mata kuliah Anda sudah benar.
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="flex items-center justify-center gap-2 w-full sm:w-auto rounded-lg bg-success px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-success/90 transition-colors"
+                                    >
+                                        <span class="material-symbols-outlined"
+                                            >lock</span
+                                        >
+                                        <span>Finalisasi KRS</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-6 bg-white dark:bg-neutral-900/50 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700/50 overflow-hidden"
+                            >
+                                <div
+                                    class="p-6 border-b border-neutral-100 dark:border-neutral-700/50"
+                                >
+                                    <h3
+                                        class="text-lg font-bold text-neutral-900 dark:text-white"
+                                    >
+                                        Mata Kuliah Tersedia
+                                    </h3>
+                                    <p
+                                        class="text-sm text-neutral-700 dark:text-neutral-200/80 mt-1"
+                                    >
+                                        Cari dan pilih mata kuliah yang ingin
+                                        Anda tambahkan ke KRS.
+                                    </p>
+                                    <div
+                                        class="mt-4 flex flex-col md:flex-row gap-4 items-center"
+                                    >
+                                        <div class="relative w-full md:flex-1">
+                                            <span
+                                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-700 dark:text-neutral-200/80"
+                                                >search</span
+                                            >
+                                            <input
+                                                class="w-full rounded-lg border-neutral-200 dark:border-neutral-700 bg-neutral-100/50 dark:bg-neutral-900 pl-10 focus:ring-primary focus:border-primary text-sm"
+                                                placeholder="Cari kode atau nama MK..."
+                                                type="text"
+                                            />
+                                        </div>
+                                        <select
+                                            class="rounded-lg border-neutral-200 dark:border-neutral-700 bg-neutral-100/50 dark:bg-neutral-900 focus:ring-primary focus:border-primary text-sm w-full md:w-auto"
+                                        >
+                                            <option>Semua Semester</option>
+                                            <option>Semester 1</option>
+                                            <option>Semester 3</option>
+                                            <option>Semester 5</option>
+                                            <option>Semester 7</option>
+                                        </select>
+                                        <select
+                                            class="rounded-lg border-neutral-200 dark:border-neutral-700 bg-neutral-100/50 dark:bg-neutral-900 focus:ring-primary focus:border-primary text-sm w-full md:w-auto"
+                                        >
+                                            <option>Semua Jenis</option>
+                                            <option>Wajib</option>
+                                            <option>Pilihan</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button
+                                            class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary/10 px-4 py-2 text-sm font-bold text-primary hover:bg-primary/20 transition-colors dark:text-blue-300 dark:bg-blue-500/10 dark:hover:bg-blue-500/20"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                >auto_awesome</span
+                                            >
+                                            <span
+                                                >Pilih Otomatis</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-sm text-left text-neutral-700 dark:text-neutral-200/80"
+                                    >
+                                        <thead
+                                            class="text-xs text-neutral-700 dark:text-neutral-200/80 uppercase bg-neutral-100/50 dark:bg-neutral-900"
+                                        >
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Kode MK
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Nama Mata Kuliah
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3 text-center"
+                                                    scope="col"
+                                                >
+                                                    SKS
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Semester
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Jadwal &amp; Ruang
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Nama Dosen
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3 text-center"
+                                                    scope="col"
+                                                >
+                                                    Kuota
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Aksi
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Semester 1 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 1 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK101</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Dasar Pemrograman</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Senin, 08:00-10:30 (R. Lab Prog)</td>
+                                                <td class="px-6 py-4">Ardiansyah, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK102</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Matematika Dasar</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Selasa, 08:00-09:40 (R. Umum 1)</td>
+                                                <td class="px-6 py-4">Dr. M. Nasir, M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK103</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Fisika Dasar</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Selasa, 10:00-11:40 (R. Fisika 1)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. T. Abdullah, M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK104</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Bahasa Inggris I</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Rabu, 08:00-09:40 (R. Bahasa 1)</td>
+                                                <td class="px-6 py-4">Nurul Huda, S.S., M.Hum.</td>
+                                                <td class="px-6 py-4 text-center">39/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK105</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pengantar Ilmu Komputer</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Rabu, 10:00-11:40 (R. Lab SI)</td>
+                                                <td class="px-6 py-4">Dr. Ir. M. Dirhamsyah, M.T.</td>
+                                                <td class="px-6 py-4 text-center">37/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK106</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pendidikan Agama Islam</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4 text-center">1</td>
+                                                <td class="px-6 py-4">Kamis, 08:00-10:30 (R. Baitullah)</td>
+                                                <td class="px-6 py-4">Dr. H. Ahmad Qoyim, Lc., M.A.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <!-- Semester 2 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 2 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK201</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Struktur Data</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Senin, 10:00-12:30 (R. Lab SI)</td>
+                                                <td class="px-6 py-4">Rusydi, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK202</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Basis Data</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Senin, 13:00-15:30 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Nurdin, S.Kom., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">39/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK203</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Operasi</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Selasa, 13:00-15:30 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Faisal, S.Kom., M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK204</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Bahasa Inggris II</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Rabu, 08:00-09:40 (R. Bahasa 2)</td>
+                                                <td class="px-6 py-4">Sariani, S.Pd., M.A.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK205</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Algoritma Lanjut</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Kamis, 10:00-11:40 (R. Lab Prog)</td>
+                                                <td class="px-6 py-4">Ardiansyah, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">32/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MK206</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kewarganegaraan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4">Jumat, 08:00-09:40 (R. Umum 2)</td>
+                                                <td class="px-6 py-4">Drs. Sayuti, M.Pd.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 3 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 3 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF301</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pemrograman Web Lanjutan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Senin, 10:00-12:30 (R. Lab SI)</td>
+                                                <td class="px-6 py-4">Dr. Husaini, M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">25/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF302</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kecerdasan Buatan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Selasa, 08:00-10:30 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. M. Dirhamsyah, M.T.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF303</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Jaringan Komputer</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Rabu, 13:00-15:30 (R. Jarkom)</td>
+                                                <td class="px-6 py-4">Faisal, S.Kom., M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF304</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Proyek TI</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Kamis, 10:00-11:40 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MKU301</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Studi Islam</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Kamis, 08:00-09:40 (R. Baitullah)</td>
+                                                <td class="px-6 py-4">Dr. Phil. Saiful Akmal, M.A.</td>
+                                                <td class="px-6 py-4 text-center">39/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MKU302</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Bahasa Indonesia</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4">Jumat, 10:00-11:40 (R. Umum 1)</td>
+                                                <td class="px-6 py-4">Drs. Sayuti, M.Pd.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 4 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 4 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF401</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Rekayasa Perangkat Lunak</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Senin, 08:00-10:30 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Rusydi, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF402</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Jaringan Komputer Lanjut</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Selasa, 10:00-12:30 (R. Jarkom)</td>
+                                                <td class="px-6 py-4">Dr. Husaini, M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">28/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF403</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Basis Data</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Rabu, 08:00-10:30 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Nurdin, S.Kom., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">39/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF404</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pengembangan Aplikasi Mobile</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Kamis, 13:00-15:30 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Ardiansyah, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MKU401</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Filsafat Ilmu</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Jumat, 08:00-09:40 (R. Umum 2)</td>
+                                                <td class="px-6 py-4">Dr. Phil. Saiful Akmal, M.A.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">MKU402</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Bahasa Inggris III</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4">Jumat, 10:00-11:40 (R. Bahasa 3)</td>
+                                                <td class="px-6 py-4">Sariani, S.Pd., M.A.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 5 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 5 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF501</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Data Mining</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Selasa, 13:00-15:30 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Zulfan, S.T., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">15/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF502</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pengolahan Citra Digital</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Rabu, 10:00-12:30 (R. Lab Multimedia)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">39/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF503</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Pendukung Keputusan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Kamis, 13:00-15:30 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Zulfan, S.T., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF504</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Arsitektur Komputer</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Jumat, 08:00-10:30 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. T. Abdullah, M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF505</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kecerdasan Buatan Lanjut</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Senin, 13:00-15:30 (R. 4.2)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. M. Dirhamsyah, M.T.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF506</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Informasi Manajemen</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">5</td>
+                                                <td class="px-6 py-4">Selasa, 08:00-09:40 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">32/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 6 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 6 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF601</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Keamanan Informasi</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Jumat, 14:00-16:30 (R. 4.2)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. M. Dirhamsyah, M.T.</td>
+                                                <td class="px-6 py-4 text-center">40/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-not-allowed rounded-lg h-8 px-4 bg-neutral-200 text-neutral-700 text-xs font-bold leading-normal tracking-[0.015em]" disabled="">
+                                                        <span class="material-symbols-outlined text-base">error</span><span>Penuh</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF602</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Terdistribusi</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Jumat, 10:00-12:30 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Dr. Husaini, M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">25/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF603</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kriptografi</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Senin, 13:00-15:30 (R. 4.2)</td>
+                                                <td class="px-6 py-4">Zulfan, S.T., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF604</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Jaringan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Selasa, 13:00-15:30 (R. Jarkom)</td>
+                                                <td class="px-6 py-4">Faisal, S.Kom., M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF605</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Proyek TI Lanjut</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Rabu, 10:00-11:40 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF606</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Etika Profesi TI</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4">Kamis, 08:00-09:40 (R. Umum 1)</td>
+                                                <td class="px-6 py-4">Dr. Phil. Saiful Akmal, M.A.</td>
+                                                <td class="px-6 py-4 text-center">32/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 7 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 7 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF701</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Cerdas</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Senin, 08:00-10:30 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Prof. Dr. Ir. M. Dirhamsyah, M.T.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF702</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Informasi Geografis</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Selasa, 10:00-12:30 (R. 4.2)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF703</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Pengetahuan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Rabu, 13:00-15:30 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Zulfan, S.T., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">30/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF704</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Sistem Keamanan Jaringan</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Kamis, 10:00-11:40 (R. Jarkom)</td>
+                                                <td class="px-6 py-4">Faisal, S.Kom., M.Eng.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF705</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Basis Data Lanjut</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Jumat, 08:00-09:40 (R. 3.1)</td>
+                                                <td class="px-6 py-4">Nurdin, S.Kom., M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF706</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Pemrograman Paralel</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">7</td>
+                                                <td class="px-6 py-4">Jumat, 10:00-11:40 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Ardiansyah, S.Kom., M.Kom.</td>
+                                                <td class="px-6 py-4 text-center">32/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Semester 8 -->
+                                            <tr class="bg-gray-100 dark:bg-neutral-800/50">
+                                                <td colspan="8" class="px-6 py-3 font-bold text-lg text-center">Semester 8 (Total: 24 SKS)</td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF801</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kerja Praktik</td>
+                                                <td class="px-6 py-4 text-center">4</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">-</td>
+                                                <td class="px-6 py-4">Supervisor Lapangan</td>
+                                                <td class="px-6 py-4 text-center">-</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF802</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Skripsi</td>
+                                                <td class="px-6 py-4 text-center">6</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">-</td>
+                                                <td class="px-6 py-4">Pembimbing Skripsi</td>
+                                                <td class="px-6 py-4 text-center">-</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF803</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Seminar</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">-</td>
+                                                <td class="px-6 py-4">Dosen Pengampu</td>
+                                                <td class="px-6 py-4 text-center">-</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF804</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kewirausahaan</td>
+                                                <td class="px-6 py-4 text-center">2</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">Selasa, 10:00-11:40 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Dr. H. M. Nasir, M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">35/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF805</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Manajemen Proyek Akhir</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">Rabu, 13:00-15:30 (R. 3.2)</td>
+                                                <td class="px-6 py-4">Viska Mutiawani, M.IT.</td>
+                                                <td class="px-6 py-4 text-center">38/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                             <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">INF806</td>
+                                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Studi Kelayakan Bisnis</td>
+                                                <td class="px-6 py-4 text-center">3</td>
+                                                <td class="px-6 py-4 text-center">8</td>
+                                                <td class="px-6 py-4">Kamis, 10:00-11:40 (R. 4.1)</td>
+                                                <td class="px-6 py-4">Dr. Ir. M. Nasir, M.Sc.</td>
+                                                <td class="px-6 py-4 text-center">32/40</td>
+                                                <td class="px-6 py-4">
+                                                    <button class="flex items-center justify-center gap-1.5 w-[84px] cursor-pointer rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                                        <span class="material-symbols-outlined text-base">add</span><span>Tambah</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="../navbar.js"></script>
+        <script>
+            // KRS Management System
+            document.addEventListener('DOMContentLoaded', function() {
+                // Load saved KRS from localStorage
+                let savedKRS = JSON.parse(localStorage.getItem('savedKRS') || '[]');
+
+                // Function to save KRS to localStorage
+                function saveToLocalStorage() {
+                    localStorage.setItem('savedKRS', JSON.stringify(savedKRS));
+                }
+
+                // Function to update SKS counter
+                function updateSKSCounter() {
+                    const totalSKS = savedKRS.reduce((sum, course) => sum + course.sks, 0);
+                    const sksDisplay = document.querySelector('.grid.grid-cols-2 div:nth-child(2) p.font-bold');
+                    if (sksDisplay) {
+                        sksDisplay.textContent = totalSKS;
+                    }
+                }
+
+                // Function to add course to KRS
+                function addCourseToKRS(courseData) {
+                    // Check if course already exists
+                    const exists = savedKRS.find(course => course.kode === courseData.kode);
+                    if (!exists) {
+                        savedKRS.push(courseData);
+                        saveToLocalStorage();
+                        updateSKSCounter();
+                        return true;
+                    }
+                    return false;
+                }
+
+                // Function to update button state
+                function updateButtonState(button, kode) {
+                    const isAdded = savedKRS.find(course => course.kode === kode);
+                    if (isAdded) {
+                        button.innerHTML = `
+                            <span class="material-symbols-outlined text-base">check</span>
+                            <span>Ditambahkan</span>
+                        `;
+                        button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
+                        button.classList.add('bg-success', 'cursor-not-allowed');
+                        button.disabled = true;
+                    }
+                }
+
+                // Add click handlers to all "Tambah" buttons
+                const addButtons = document.querySelectorAll('button:not([disabled])');
+
+                addButtons.forEach(button => {
+                    // Skip if not a "Tambah" button
+                    if (!button.textContent.includes('Tambah')) return;
+
+                    const row = button.closest('tr');
+                    if (!row) return;
+
+                    const cells = row.querySelectorAll('td');
+                    const kode = cells[0]?.textContent.trim();
+                    const nama = cells[1]?.textContent.trim();
+                    const sks = parseInt(cells[2]?.textContent.trim());
+                    const semester = parseInt(cells[3]?.textContent.trim());
+                    const jadwal = cells[4]?.textContent.trim(); // Adjusted index for semester column
+                    const dosen = cells[5]?.textContent.trim(); // Adjusted index
+                    const kuotaText = cells[6]?.textContent.trim(); // Adjusted index
+
+                    // Parse kuota
+                    const [terisi, total] = kuotaText.split('/').map(num => parseInt(num));
+
+                    // Check if already added and update button
+                    updateButtonState(button, kode);
+
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        // Prepare course data
+                        const courseData = {
+                            kode: kode,
+                            nama: nama,
+                            sks: sks,
+                            semester: semester,
+                            jadwal: jadwal,
+                            dosen: dosen,
+                            kuota: {
+                                terisi: terisi + 1,
+                                total: total
+                            }
+                        };
+
+                        // Add to KRS
+                        if (addCourseToKRS(courseData)) {
+                            // Update button
+                            this.innerHTML = `
+                                <span class="material-symbols-outlined text-base">check</span>
+                                <span>Ditambahkan</span>
+                            `;
+                            this.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
+                            this.classList.add('bg-success', 'cursor-not-allowed');
+                            this.disabled = true;
+
+                            // Update kuota in the table
+                            cells[6].textContent = `${terisi + 1}/${total}`; // Adjusted index
+
+                            // Show success notification
+                            showNotification('Berhasil menambahkan mata kuliah ke KRS!', 'success');
+                        }
+                    });
+                });
+
+                // Pilih Otomatis function
+                const pilihOtomatisButton = Array.from(document.querySelectorAll('button')).find(btn =>
+                    btn.textContent.includes('Pilih Otomatis')
+                );
+
+                if (pilihOtomatisButton) {
+                    pilihOtomatisButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        const currentSemester = 5; // Assuming current semester is 5 for demonstration
+                        let addedCount = 0;
+                        let alreadyAddedCount = 0;
+
+                        const tableRows = document.querySelectorAll('tbody tr');
+
+                        tableRows.forEach(row => {
+                            const cells = row.querySelectorAll('td');
+                            if (cells.length === 0) return;
+
+                            // Check if it's a semester header row
+                            if (cells.length === 1 && cells[0].textContent.includes('Semester')) {
+                                return;
+                            }
+
+                            const kode = cells[0]?.textContent.trim();
+                            const nama = cells[1]?.textContent.trim();
+                            const sks = parseInt(cells[2]?.textContent.trim());
+                            const semester = parseInt(cells[3]?.textContent.trim()); // Semester is now at index 3
+                            const jadwal = cells[4]?.textContent.trim(); // Adjusted index
+                            const dosen = cells[5]?.textContent.trim(); // Adjusted index
+                            const kuotaText = cells[6]?.textContent.trim(); // Adjusted index
+                            const button = cells[7]?.querySelector('button'); // Adjusted index for button
+
+                            if (semester === currentSemester && button && !button.disabled) {
+                                const [terisi, total] = kuotaText.split('/').map(num => parseInt(num));
+
+                                const courseData = {
+                                    kode: kode,
+                                    nama: nama,
+                                    sks: sks,
+                                    semester: semester,
+                                    jadwal: jadwal,
+                                    dosen: dosen,
+                                    kuota: {
+                                        terisi: terisi + 1,
+                                        total: total
+                                    }
+                                };
+
+                                if (addCourseToKRS(courseData)) {
+                                    button.innerHTML = `
+                                        <span class="material-symbols-outlined text-base">check</span>
+                                        <span>Ditambahkan</span>
+                                    `;
+                                    button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
+                                    button.classList.add('bg-success', 'cursor-not-allowed');
+                                    button.disabled = true;
+
+                                    cells[6].textContent = `${terisi + 1}/${total}`; // Adjusted index
+                                    addedCount++;
+                                } else {
+                                    alreadyAddedCount++;
+                                }
+                            }
+                        });
+
+                        if (addedCount > 0) {
+                            showNotification(`Berhasil menambahkan ${addedCount} mata kuliah semester ${currentSemester} ke KRS!`, 'success');
+                        } else if (alreadyAddedCount > 0) {
+                            showNotification('Semua mata kuliah semester ini sudah ditambahkan sebelumnya.', 'success');
+                        } else {
+                            showNotification('Tidak ada mata kuliah semester ini yang tersedia.', 'warning');
+                        }
+                    });
+                }
+
+                // Simple notification function
+                function showNotification(message, type = 'success') {
+                    const notification = document.createElement('div');
+                    const bgColor = type === 'success' ? 'bg-success' : type === 'warning' ? 'bg-warning' : 'bg-danger';
+                    notification.className = `fixed top-24 right-4 z-50 px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 ${bgColor} text-white`;
+                    notification.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined">${type === 'success' ? 'check_circle' : type === 'warning' ? 'warning' : 'error'}</span>
+                            <span class="font-medium">${message}</span>
+                        </div>
+                    `;
+                    document.body.appendChild(notification);
+
+                    // Animate in
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(0)';
+                    }, 100);
+
+                    // Remove after 3 seconds
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(400px)';
+                        setTimeout(() => notification.remove(), 300);
+                    }, 3000);
+                }
+
+                // Initialize SKS counter
+                updateSKSCounter();
+            });
+        </script>
+    </body>
+</html>

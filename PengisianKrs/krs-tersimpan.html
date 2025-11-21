@@ -1,0 +1,636 @@
+<!doctype html>
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>KRS Tersimpan - UIN Ar-Raniry</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#26A69A",
+                            "background-light": "#f6f7f8",
+                            "background-dark": "#101922",
+                            "neutral-100": "#f0f2f4",
+                            "neutral-200": "#dbe0e6",
+                            "neutral-700": "#617589",
+                            "neutral-900": "#111418",
+                            accent: "#FFD700",
+                            success: "#28a745",
+                            warning: "#ffc107",
+                            danger: "#dc3545",
+                        },
+                        fontFamily: {
+                            display: ["Manrope", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                font-family: "Manrope", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-background-light dark:bg-background-dark font-display">
+        <div class="flex min-h-screen w-full flex-col">
+            <header
+                class="sticky top-0 z-20 w-full bg-primary text-white shadow-md"
+            >
+                <div class="container mx-auto px-4">
+                    <div class="flex h-20 items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 bg-white p-1"
+                                data-alt="Logo UIN Ar-Raniry"
+                                style="
+                                    background-image: url(https://assets.siakadcloud.com/uploads/uinarraniry/logoaplikasi/1498.jpg);
+                                "
+                            ></div>
+                            <div>
+                                <p class="text-sm font-semibold">
+                                    SIM Akademik
+                                </p>
+                                <h1 class="text-lg font-bold">
+                                    UIN Ar-Raniry Banda Aceh
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <button
+                                class="relative rounded-full p-2 hover:bg-white/10"
+                            >
+                                <span class="material-symbols-outlined"
+                                    >notifications</span
+                                >
+                            </button>
+                            <button
+                                class="flex items-center gap-2 rounded-full p-1 pr-3 hover:bg-white/10"
+                            >
+                                <div
+                                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8"
+                                    data-alt="Foto profil Aisyah Humaira"
+                                    style="
+                                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDtssAvcsydxr_YXtC4O_XuolmS23AfkcgitJ79eBx2VOJsOZxhOr1wX0-Ksi64Uztlb3z8J9FW8KiVumV_I_qku6HhM4kzEdFHg5AfmcuqHm0c80JMLKswSj8nnGRO7-wpkjaH00PDNU3FNDyjieaz6uQGdSdoy_p-CV6EafyJ7Dua4jBblvwRJb7BgI-WBWaDZ-dkaHzTpaox7QipyGeoKB1h99owCYulC1VQu1UxPk1mK1mBRMhfJ7uQfKfI61c3SfJlLvSR7I5C);
+                                    "
+                                ></div>
+                                <span class="font-semibold hidden sm:block"
+                                    >Al-Fatih</span
+                                >
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >expand_more</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="flex h-12 items-center">
+                        <ul
+                            class="flex items-center gap-1 text-sm font-semibold"
+                        >
+                            <li>
+                                <a
+                                    class="flex items-center px-4 py-2 rounded-md hover:bg-white/10"
+                                    href="../dashboard.html"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Jadwal
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Jadwal</div>
+                                    <a href="../jadwal/jadwal-kuliah.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">event</span>
+                                        <div>
+                                            <div class="font-medium">Jadwal Kuliah</div>
+                                            <div class="text-xs text-white/60">Lihat jadwal perkuliahan</div>
+                                        </div>
+                                    </a>
+                                    <a href="../jadwal/jadwal-ujian.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">quiz</span>
+                                        <div>
+                                            <div class="font-medium">Jadwal Ujian</div>
+                                            <div class="text-xs text-white/60">Lihat jadwal ujian</div>
+                                        </div>
+                                    </a>
+                                    <a href="../jadwal/kalender-akademik.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">calendar_month</span>
+                                        <div>
+                                            <div class="font-medium">Kalender Akademik</div>
+                                            <div class="text-xs text-white/60">Periksa kegiatan perkuliahan</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Akademik
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Akademik</div>
+                                    <a href="pengisian-krs.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">edit_note</span>
+                                        <div>
+                                            <div class="font-medium">Pengisian KRS</div>
+                                            <div class="text-xs text-white/60">Isi kartu rencana studi</div>
+                                        </div>
+                                    </a>
+                                    <a href="lihat-krs.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">description</span>
+                                        <div>
+                                            <div class="font-medium">Lihat KRS</div>
+                                            <div class="text-xs text-white/60">Lihat KRS yang diajukan</div>
+                                        </div>
+                                    </a>
+                                    <a href="../hasil-studi/khs-persemester.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">assessment</span>
+                                        <div>
+                                            <div class="font-medium">KHS</div>
+                                            <div class="text-xs text-white/60">Kartu hasil studi</div>
+                                        </div>
+                                    </a>
+                                    <a href="../hasil-studi/transkrip.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">article</span>
+                                        <div>
+                                            <div class="font-medium">Transkrip Nilai</div>
+                                            <div class="text-xs text-white/60">Lihat transkrip nilai</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Tingkat Akhir
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Tingkat Akhir</div>
+                                    <a href="../tingkatAkhir/skripsi.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">school</span>
+                                        <div>
+                                            <div class="font-medium">Skripsi</div>
+                                            <div class="text-xs text-white/60">Pengajuan skripsi</div>
+                                        </div>
+                                    </a>
+                                    <a href="../tingkatAkhir/seminar-proposal.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">present_to_all</span>
+                                        <div>
+                                            <div class="font-medium">Seminar Proposal</div>
+                                            <div class="text-xs text-white/60">Jadwal seminar proposal</div>
+                                        </div>
+                                    </a>
+                                    <a href="../tingkatAkhir/sidang.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">verified</span>
+                                        <div>
+                                            <div class="font-medium">Sidang</div>
+                                            <div class="text-xs text-white/60">Sidang akhir</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <a
+                                    class="dropdown-toggle flex items-center gap-1 px-4 py-2 rounded-md hover:bg-white/10 cursor-pointer"
+                                    href="#"
+                                >
+                                    Hasil Studi
+                                    <span
+                                        class="material-symbols-outlined text-base"
+                                        >expand_more</span
+                                    >
+                                </a>
+                                <div class="dropdown-menu hidden absolute top-full left-0 mt-1 bg-[#26A69A] rounded-lg shadow-xl min-w-[280px] py-3 z-50 border border-white/10">
+                                    <div class="px-4 py-2 text-white/60 text-xs font-semibold uppercase tracking-wider border-b border-white/10 mb-2">Hasil Studi</div>
+                                    <a href="../hasil-studi/khs-persemester.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">summarize</span>
+                                        <div>
+                                            <div class="font-medium">KHS Per Semester</div>
+                                            <div class="text-xs text-white/60">Kartu hasil studi per semester</div>
+                                        </div>
+                                    </a>
+                                    <a href="../hasil-studi/transkrip.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">receipt_long</span>
+                                        <div>
+                                            <div class="font-medium">Transkrip</div>
+                                            <div class="text-xs text-white/60">Transkrip nilai keseluruhan</div>
+                                        </div>
+                                    </a>
+                                    <a href="../hasil-studi/ipk.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-white/80">workspace_premium</span>
+                                        <div>
+                                            <div class="font-medium">IPK</div>
+                                            <div class="text-xs text-white/60">Indeks prestasi kumulatif</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="flex-1 flex-col">
+                <div class="p-8 space-y-6">
+                    <div class="flex flex-col gap-1">
+                        <p
+                            class="text-neutral-900 dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]"
+                        >
+                            Kartu Rencana Studi (KRS) Tersimpan
+                        </p>
+                        <p
+                            class="text-neutral-700 dark:text-neutral-200/80 text-base font-normal leading-normal"
+                        >
+                            Daftar mata kuliah yang telah Anda tambahkan ke KRS.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-4 bg-white dark:bg-neutral-900/50 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700/50"
+                    >
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="material-symbols-outlined text-primary dark:text-blue-400 text-3xl"
+                                >calendar_month</span
+                            >
+                            <div>
+                                <h2
+                                    class="text-sm font-medium text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    Periode Akademik
+                                </h2>
+                                <p
+                                    class="text-base font-bold text-neutral-900 dark:text-white"
+                                >
+                                    Ganjil 2023/2024
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center md:text-left"
+                        >
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    Beban SKS Maks.
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    24
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    SKS Diambil
+                                </p>
+                                <p
+                                    id="totalSKS"
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    0
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    IP Semester Lalu
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    3.85
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-neutral-700 dark:text-neutral-200/80"
+                                >
+                                    IP Kumulatif
+                                </p>
+                                <p
+                                    class="font-bold text-neutral-900 dark:text-white"
+                                >
+                                    3.72
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div
+                            class="border-b border-neutral-200 dark:border-neutral-700"
+                        >
+                            <nav
+                                aria-label="Tabs"
+                                class="-mb-px flex space-x-6"
+                            >
+                                <a
+                                    class="border-transparent text-neutral-700 hover:text-neutral-900 hover:border-neutral-300 dark:text-neutral-200/80 dark:hover:text-white dark:hover:border-neutral-500 whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm"
+                                    href="pengisian-krs.html"
+                                    >Pilih Kelas</a
+                                >
+                                <a
+                                    class="border-primary dark:border-blue-400 text-primary dark:text-blue-400 whitespace-nowrap py-3 px-1 border-b-2 font-bold text-sm"
+                                    href="krs-tersimpan.html"
+                                    >KRS Tersimpan</a
+                                >
+                            </nav>
+                        </div>
+                        <div class="mt-6">
+                            <div
+                                class="bg-white dark:bg-neutral-900/50 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700/50 overflow-hidden"
+                            >
+                                <div
+                                    class="p-6 border-b border-neutral-100 dark:border-neutral-700/50 flex justify-between items-center"
+                                >
+                                    <div>
+                                        <h3
+                                            class="text-lg font-bold text-neutral-900 dark:text-white"
+                                        >
+                                            Mata Kuliah yang Dipilih (<span id="totalSKSInTitle">0</span> SKS)
+                                        </h3>
+                                        <p
+                                            class="text-sm text-neutral-700 dark:text-neutral-200/80"
+                                        >
+                                            Berikut adalah daftar mata kuliah yang
+                                            telah Anda tambahkan ke KRS.
+                                        </p>
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <button
+                                            id="submitKRSBtn"
+                                            class="hidden items-center gap-2 px-6 py-2 rounded-lg bg-success text-white text-sm font-bold hover:bg-success/90 transition-colors"
+                                        >
+                                            <span class="material-symbols-outlined">send</span>
+                                            <span>Ajukan KRS</span>
+                                        </button>
+                                        <button
+                                            id="clearAllBtn"
+                                            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-danger text-white text-sm font-bold hover:bg-danger/90 transition-colors"
+                                        >
+                                            <span class="material-symbols-outlined">delete</span>
+                                            <span>Hapus Semua</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table
+                                        id="savedKRSTable"
+                                        class="w-full text-sm text-left text-neutral-700 dark:text-neutral-200/80"
+                                    >
+                                        <thead
+                                            class="text-xs text-neutral-700 dark:text-neutral-200/80 uppercase bg-neutral-100/50 dark:bg-neutral-900"
+                                        >
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    No
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Kode MK
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Nama Mata Kuliah
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3 text-center"
+                                                    scope="col"
+                                                >
+                                                    SKS
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Jadwal &amp; Ruang
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Nama Dosen
+                                                </th>
+                                                <th
+                                                    class="px-6 py-3"
+                                                    scope="col"
+                                                >
+                                                    Aksi
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="krsTableBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="emptyState" class="p-12 text-center hidden">
+                                    <span class="material-symbols-outlined text-6xl text-neutral-300 dark:text-neutral-600">
+                                        description
+                                    </span>
+                                    <p class="mt-4 text-lg font-medium text-neutral-700 dark:text-neutral-200/80">
+                                        Belum ada mata kuliah yang ditambahkan
+                                    </p>
+                                    <p class="text-sm text-neutral-700 dark:text-neutral-200/80 mt-2">
+                                        Silakan tambahkan mata kuliah dari halaman Pilih Kelas
+                                    </p>
+                                    <a
+                                        href="pengisian-krs.html"
+                                        class="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors"
+                                    >
+                                        <span class="material-symbols-outlined">add</span>
+                                        <span>Pilih Mata Kuliah</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="../navbar.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let savedKRS = JSON.parse(localStorage.getItem('savedKRS') || '[]');
+
+                function updateDisplay() {
+                    const tableBody = document.getElementById('krsTableBody');
+                    const emptyState = document.getElementById('emptyState');
+                    const submitBtn = document.getElementById('submitKRSBtn');
+                    const totalSKS = savedKRS.reduce((sum, course) => sum + course.sks, 0);
+
+                    document.getElementById('totalSKS').textContent = totalSKS;
+                    document.getElementById('totalSKSInTitle').textContent = totalSKS;
+
+                    if (savedKRS.length === 0) {
+                        tableBody.innerHTML = '';
+                        emptyState.classList.remove('hidden');
+                        document.getElementById('savedKRSTable').classList.add('hidden');
+                        submitBtn.classList.add('hidden');
+                        submitBtn.classList.remove('flex');
+                    } else {
+                        emptyState.classList.add('hidden');
+                        document.getElementById('savedKRSTable').classList.remove('hidden');
+                        submitBtn.classList.remove('hidden');
+                        submitBtn.classList.add('flex');
+
+                        // Display course list in table
+                        tableBody.innerHTML = savedKRS.map((course, index) => `
+                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">
+                                    ${index + 1}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">
+                                    ${course.kode}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">${course.nama}</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester ${course.semester || '-'}</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    ${course.sks}
+                                </td>
+                                <td class="px-6 py-4">
+                                    ${course.jadwal}
+                                </td>
+                                <td class="px-6 py-4">
+                                    ${course.dosen}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button
+                                        onclick="removeCourse('${course.kode}')"
+                                        class="flex items-center justify-center gap-1.5 cursor-pointer rounded-lg h-8 px-4 bg-danger text-white text-xs font-bold leading-normal tracking-[0.015em] hover:bg-danger/90 transition-colors"
+                                    >
+                                        <span class="material-symbols-outlined text-base">delete</span>
+                                        <span>Hapus</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        `).join('');
+                    }
+                }
+
+                window.removeCourse = function(kode) {
+                    if (confirm('Apakah Anda yakin ingin menghapus mata kuliah ini dari KRS?')) {
+                        savedKRS = savedKRS.filter(course => course.kode !== kode);
+                        localStorage.setItem('savedKRS', JSON.stringify(savedKRS));
+                        updateDisplay();
+                        showNotification('Mata kuliah berhasil dihapus dari KRS', 'success');
+                    }
+                };
+
+                document.getElementById('submitKRSBtn').addEventListener('click', function() {
+                    if (savedKRS.length === 0) {
+                        showNotification('Tidak ada mata kuliah untuk diajukan', 'warning');
+                        return;
+                    }
+
+                    if (confirm('Apakah Anda yakin ingin mengajukan KRS ini? Setelah diajukan, KRS tidak dapat diubah.')) {
+                        // Save submission timestamp
+                        const submissionData = {
+                            courses: savedKRS,
+                            submittedAt: new Date().toISOString(),
+                            semester: 'Ganjil 2023/2024',
+                            totalSKS: savedKRS.reduce((sum, course) => sum + course.sks, 0)
+                        };
+                        localStorage.setItem('submittedKRS', JSON.stringify(submissionData));
+
+                        // Redirect to submission page
+                        window.location.href = 'pengajuan-krs.html';
+                    }
+                });
+
+                document.getElementById('clearAllBtn').addEventListener('click', function() {
+                    if (savedKRS.length === 0) {
+                        showNotification('Tidak ada mata kuliah untuk dihapus', 'warning');
+                        return;
+                    }
+
+                    if (confirm('Apakah Anda yakin ingin menghapus SEMUA mata kuliah dari KRS?')) {
+                        savedKRS = [];
+                        localStorage.setItem('savedKRS', JSON.stringify(savedKRS));
+                        updateDisplay();
+                        showNotification('Semua mata kuliah berhasil dihapus dari KRS', 'success');
+                    }
+                });
+
+                function showNotification(message, type = 'success') {
+                    const notification = document.createElement('div');
+                    const bgColor = type === 'success' ? 'bg-success' : type === 'warning' ? 'bg-warning' : 'bg-danger';
+                    notification.className = `fixed top-24 right-4 z-50 px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 ${bgColor} text-white`;
+                    notification.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined">${type === 'success' ? 'check_circle' : type === 'warning' ? 'warning' : 'error'}</span>
+                            <span class="font-medium">${message}</span>
+                        </div>
+                    `;
+                    document.body.appendChild(notification);
+
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(0)';
+                    }, 100);
+
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(400px)';
+                        setTimeout(() => notification.remove(), 300);
+                    }, 3000);
+                }
+
+                updateDisplay();
+            });
+        </script>
+    </body>
+</html>

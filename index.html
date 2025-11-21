@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - Sistem Informasi Akademik UIN Ar-Raniry</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0D47A1",
+              accent: "#4CAF50",
+              "background-light": "#FFFFFF",
+              "background-dark": "#101922",
+              "neutral-light": "#F5F5F5",
+              "neutral-border": "#E0E0E0",
+              "text-primary": "#333333",
+              "text-secondary": "#617589",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-neutral-light font-display">
+    <div
+      class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light p-4 lg:p-8"
+    >
+      <header
+        class="absolute top-0 left-0 flex w-full items-center justify-start p-6 lg:p-8"
+      >
+        <div class="flex items-center gap-4">
+                                  <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 bg-white p-1" data-alt="Logo UIN Ar-Raniry" style="background-image: url(https://assets.siakadcloud.com/uploads/uinarraniry/logoaplikasi/1498.jpg);"></div>
+          <div class="flex flex-col">
+            <h2 class="text-base font-bold text-text-primary">
+              Sistem Informasi Akademik
+            </h2>
+            <p class="text-sm text-text-secondary">UIN Ar-Raniry Banda Aceh</p>
+          </div>
+        </div>
+      </header>
+      <main
+        class="flex w-full max-w-6xl overflow-hidden rounded-xl bg-background-light shadow-lg"
+      >
+        <div class="w-full lg:w-1/2 p-8 sm:p-12">
+          <div class="flex h-full flex-col justify-center">
+            <div class="w-full max-w-md">
+              <h1 class="text-3xl font-bold tracking-tight text-text-primary">
+                Selamat Datang
+              </h1>
+              <p class="mt-2 text-base text-text-secondary">
+                Silakan masuk menggunakan akun SIA Anda.
+              </p>
+              <form class="mt-8 space-y-6">
+                <div class="flex flex-col">
+                  <label
+                    class="mb-2 text-base font-medium text-text-primary"
+                    for="username"
+                    >Username (NIM)</label
+                  >
+                  <div class="relative flex w-full items-center">
+                    <span
+                      class="material-symbols-outlined absolute left-4 text-text-secondary"
+                      >person</span
+                    >
+                    <input
+                      class="form-input h-14 w-full flex-1 rounded-lg border border-neutral-border bg-neutral-light p-4 pl-12 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:ring-1 focus:ring-primary"
+                      id="username"
+                      placeholder="Masukkan Username Anda"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <label
+                    class="mb-2 text-base font-medium text-text-primary"
+                    for="password"
+                    >Password</label
+                  >
+                  <div class="relative flex w-full items-center">
+                    <span
+                      class="material-symbols-outlined absolute left-4 text-text-secondary"
+                      >lock</span
+                    >
+                    <input
+                      class="form-input h-14 w-full flex-1 rounded-lg border border-neutral-border bg-neutral-light p-4 pl-12 pr-12 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:ring-1 focus:ring-primary"
+                      id="password"
+                      placeholder="Masukkan Password Anda"
+                      type="password"
+                    />
+                    <button
+                      class="absolute right-4 text-text-secondary"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined">visibility</span>
+                    </button>
+                  </div>
+                </div>
+                <a
+                  class="block text-right text-sm font-medium text-primary hover:underline"
+                  href="#"
+                  >Lupa Password?</a
+                >
+                <button
+                  class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold tracking-wide text-white transition-colors hover:bg-primary/90"
+                  type="submit"
+                >
+                  <span class="truncate">Masuk</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="relative hidden w-1/2 bg-primary lg:block">
+          <!-- <img
+            alt="Campus building with students walking"
+            class="h-full w-full object-cover"
+            data-alt="Photo of the UIN Ar-Raniry campus"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo12WjvBwrxxWaKWrMUiw8UZ_PSQvLd1m7RJtCGpSGUFf4aau9Yg8F7yqusktX61plxRMu3LnbiOprHT1ADE83sHTg7FyFPFoj0qU9GS3Y1wvN9pteLKDowGh7RnUpRw9YTYrxybtfl4Y4kZbT_znXS79B7KRG-4WL72PUN1karZp0CfizdfMMBWbEzIYqoZKbMEweSzzhjxhgLAwN906efu_MD0gdlWr_rJ1FaepKUGGL79aLbte85N_IYF5Viu02Zffu2njA138I"
+          /> -->
+          <div class="absolute inset-0 bg-primary/40"></div>
+        </div>
+      </main>
+      <footer class="absolute bottom-0 w-full p-6 text-center">
+        <p class="text-sm text-text-secondary">
+          © 2024 UIN Ar-Raniry Banda Aceh. Hak Cipta Dilindungi.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

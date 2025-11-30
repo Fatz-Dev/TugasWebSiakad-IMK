@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="light" lang="id">
 <head>
@@ -206,33 +207,155 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="flex-1 px-6 py-8 container mx-auto">
-            <!-- Page Header -->
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Jadwal Kuliah</h1>
-                <p class="text-neutral-700 dark:text-neutral-200">Lihat jadwal kuliah Anda untuk semester ini.</p>
+                <p class="text-neutral-700 dark:text-neutral-200">Semester Ganjil 2023/2024</p>
             </div>
 
-            <!-- Empty State Card -->
-            <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-12 border border-neutral-200 dark:border-neutral-700">
-                <div class="flex flex-col items-center justify-center text-center max-w-md mx-auto">
-                    <!-- Icon -->
-                    <div class="w-24 h-24 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-6xl text-neutral-400">schedule</span>
+            <!-- Filter Section -->
+            <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-6 border border-neutral-200 dark:border-neutral-700 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-200 mb-2">Hari</label>
+                        <select class="w-full rounded-lg border border-neutral-300 dark:border-neutral-600 px-4 py-2 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white">
+                            <option value="">Semua Hari</option>
+                            <option value="senin">Senin</option>
+                            <option value="selasa">Selasa</option>
+                            <option value="rabu">Rabu</option>
+                            <option value="kamis">Kamis</option>
+                            <option value="jumat">Jumat</option>
+                        </select>
                     </div>
-                    
-                    <!-- Message -->
-                    <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-3">Fitur Belum Tersedia</h2>
-                    <p class="text-neutral-600 dark:text-neutral-300 mb-6">
-                        Fitur sedang dalam tahap pengembangan dan akan segera tersedia untuk Anda.
-                    </p>
-                    
-                    <!-- Action Button -->
-                    <a href="../dashboard.html" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
-                        <span class="material-symbols-outlined text-base">arrow_back</span>
-                        <span>Kembali ke Beranda</span>
-                    </a>
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-200 mb-2">Semester</label>
+                        <select class="w-full rounded-lg border border-neutral-300 dark:border-neutral-600 px-4 py-2 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white">
+                            <option value="3">Semester 3</option>
+                            <option value="all">Semua Semester</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-200 mb-2">Cari Mata Kuliah</label>
+                        <input type="text" placeholder="Cari..." class="w-full rounded-lg border border-neutral-300 dark:border-neutral-600 px-4 py-2 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Table -->
+            <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-neutral-700 dark:text-neutral-200/80">
+                        <thead class="text-xs text-neutral-700 dark:text-neutral-200/80 uppercase bg-neutral-100/50 dark:bg-neutral-800">
+                            <tr>
+                                <th class="px-6 py-3" scope="col">Hari</th>
+                                <th class="px-6 py-3" scope="col">Waktu</th>
+                                <th class="px-6 py-3" scope="col">Kode MK</th>
+                                <th class="px-6 py-3" scope="col">Mata Kuliah</th>
+                                <th class="px-6 py-3 text-center" scope="col">SKS</th>
+                                <th class="px-6 py-3" scope="col">Ruangan</th>
+                                <th class="px-6 py-3" scope="col">Dosen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Senin</td>
+                                <td class="px-6 py-4">10:00 - 12:30</td>
+                                <td class="px-6 py-4 font-medium text-primary">INF301</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">Pemrograman Web Lanjutan</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester 3</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">3</td>
+                                <td class="px-6 py-4">R. 3.1</td>
+                                <td class="px-6 py-4">Dr. Ahmad Zaki, M.Kom.</td>
+                            </tr>
+                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Selasa</td>
+                                <td class="px-6 py-4">08:00 - 10:30</td>
+                                <td class="px-6 py-4 font-medium text-primary">INF302</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">Kecerdasan Buatan</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester 3</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">3</td>
+                                <td class="px-6 py-4">R. 2.3</td>
+                                <td class="px-6 py-4">Prof. Dr. Ir. Siti Rahma, M.T.</td>
+                            </tr>
+                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Rabu</td>
+                                <td class="px-6 py-4">13:00 - 15:30</td>
+                                <td class="px-6 py-4 font-medium text-primary">INF303</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">Jaringan Komputer</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester 3</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">3</td>
+                                <td class="px-6 py-4">Lab. Jaringan</td>
+                                <td class="px-6 py-4">M. Ridwan, S.Kom., M.T.</td>
+                            </tr>
+                            <tr class="border-b border-neutral-100 dark:border-neutral-700/50 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Kamis</td>
+                                <td class="px-6 py-4">10:00 - 11:40</td>
+                                <td class="px-6 py-4 font-medium text-primary">INF304</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">Manajemen Proyek TI</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester 3</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">2</td>
+                                <td class="px-6 py-4">R. 4.2</td>
+                                <td class="px-6 py-4">Dra. Fatimah, M.M.</td>
+                            </tr>
+                            <tr class="hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+                                <td class="px-6 py-4 font-medium text-neutral-900 dark:text-white">Jumat</td>
+                                <td class="px-6 py-4">09:00 - 12:00</td>
+                                <td class="px-6 py-4 font-medium text-primary">INF305</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-neutral-900 dark:text-white">Kerja Praktik</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80 mt-1">Semester 8</div>
+                                </td>
+                                <td class="px-6 py-4 text-center">3</td>
+                                <td class="px-6 py-4">Industri</td>
+                                <td class="px-6 py-4">Tim Dosen Pembimbing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Summary Card -->
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-6 border border-neutral-200 dark:border-neutral-700">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary/10 rounded-full p-3">
+                            <span class="material-symbols-outlined text-primary text-2xl">event_available</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-200/80">Total Mata Kuliah</p>
+                            <p class="text-2xl font-bold text-neutral-900 dark:text-white">5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-6 border border-neutral-200 dark:border-neutral-700">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-success/10 rounded-full p-3">
+                            <span class="material-symbols-outlined text-success text-2xl">schedule</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-200/80">Total SKS</p>
+                            <p class="text-2xl font-bold text-neutral-900 dark:text-white">14</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-6 border border-neutral-200 dark:border-neutral-700">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-warning/10 rounded-full p-3">
+                            <span class="material-symbols-outlined text-warning text-2xl">calendar_today</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-200/80">Hari Kuliah</p>
+                            <p class="text-2xl font-bold text-neutral-900 dark:text-white">5</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="light" lang="id">
 <head>
@@ -84,7 +85,7 @@
                                 <a href="./jadwal-kuliah.html" class="flex items-center gap-3 px-4 py-3 text-white hover:bg-white/10 transition-colors">
                                     <span class="material-symbols-outlined text-white/80">event</span>
                                     <div>
-                                        <div class="font-medium">Jadwal Ujian</div>
+                                        <div class="font-medium">Jadwal Kuliah</div>
                                         <div class="text-xs text-white/60">Lihat jadwal perkuliahan</div>
                                     </div>
                                 </a>
@@ -206,38 +207,306 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="flex-1 px-6 py-8 container mx-auto">
-            <!-- Page Header -->
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Kalender Akademik</h1>
-                <p class="text-neutral-700 dark:text-neutral-200">Lihat Jadwal Ujian Anda untuk semester ini.</p>
+                <p class="text-neutral-700 dark:text-neutral-200">Tahun Akademik 2023/2024</p>
             </div>
 
-            <!-- Empty State Card -->
-            <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm p-12 border border-neutral-200 dark:border-neutral-700">
-                <div class="flex flex-col items-center justify-center text-center max-w-md mx-auto">
-                    <!-- Icon -->
-                    <div class="w-24 h-24 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-6xl text-neutral-400">schedule</span>
+            <!-- Semester Filter -->
+            <div class="mb-6">
+                <div class="border-b border-neutral-200 dark:border-neutral-700">
+                    <nav class="-mb-px flex space-x-8">
+                        <button class="semester-btn active border-b-2 border-primary text-primary py-4 px-1 text-sm font-semibold" data-semester="ganjil">
+                            Semester Ganjil
+                        </button>
+                        <button class="semester-btn border-b-2 border-transparent text-neutral-700 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 py-4 px-1 text-sm font-semibold" data-semester="genap">
+                            Semester Genap
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Ganjil Content -->
+            <div id="ganjil-content" class="semester-content">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- September 2023 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">September 2023</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-primary">04</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Sept</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Awal Semester Ganjil</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Perkuliahan dimulai</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">04-15</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Sept</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Pengisian KRS</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Periode pengisian KRS semester ganjil</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Message -->
-                    <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-3">Fitur Belum Tersedia</h2>
-                    <p class="text-neutral-600 dark:text-neutral-300 mb-6">
-                        Fitur Jadwal Ujian sedang dalam tahap pengembangan dan akan segera tersedia untuk Anda.
-                    </p>
+                    <!-- Oktober 2023 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Oktober 2023</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">20-25</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Okt</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Ujian Tengah Semester (UTS)</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Pelaksanaan UTS semester ganjil</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Action Button -->
-                    <a href="../dashboard.html" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
-                        <span class="material-symbols-outlined text-base">arrow_back</span>
-                        <span>Kembali ke Beranda</span>
-                    </a>
+                    <!-- November 2023 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">November 2023</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-success">01-30</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Nov</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Perkuliahan Pasca UTS</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Melanjutkan perkuliahan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desember 2023 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Desember 2023</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">15-20</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Des</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Ujian Akhir Semester (UAS)</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Pelaksanaan UAS semester ganjil</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-danger">25-31</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Des</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Libur Semester</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Libur akhir semester ganjil</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Genap Content -->
+            <div id="genap-content" class="semester-content hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Februari 2024 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Februari 2024</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-primary">05</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Feb</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Awal Semester Genap</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Perkuliahan dimulai</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">05-16</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Feb</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Pengisian KRS</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Periode pengisian KRS semester genap</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 2024 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">April 2024</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">08-13</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Apr</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Ujian Tengah Semester (UTS)</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Pelaksanaan UTS semester genap</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juni 2024 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Juni 2024</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-warning">10-15</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Jun</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Ujian Akhir Semester (UAS)</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Pelaksanaan UAS semester genap</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-danger">20-30</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Jun</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Libur Semester</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Libur akhir semester genap</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juli 2024 -->
+                    <div class="bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Juli 2024</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3">
+                                <div class="text-center min-w-[60px]">
+                                    <div class="text-2xl font-bold text-success">01-31</div>
+                                    <div class="text-xs text-neutral-700 dark:text-neutral-200/80">Jul</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-neutral-900 dark:text-white">Libur Panjang</div>
+                                    <div class="text-sm text-neutral-700 dark:text-neutral-200/80">Libur akhir tahun akademik</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="mt-8 bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-6">
+                <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-4">Keterangan:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 rounded bg-primary"></div>
+                        <span class="text-sm text-neutral-700 dark:text-neutral-200">Awal Semester</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 rounded bg-warning"></div>
+                        <span class="text-sm text-neutral-700 dark:text-neutral-200">Ujian / KRS</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 rounded bg-success"></div>
+                        <span class="text-sm text-neutral-700 dark:text-neutral-200">Perkuliahan</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 rounded bg-danger"></div>
+                        <span class="text-sm text-neutral-700 dark:text-neutral-200">Libur</span>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
 
     <script src="../navbar.js"></script>
+    <script>
+        // Semester toggle functionality
+        const semesterButtons = document.querySelectorAll('.semester-btn');
+        const semesterContents = document.querySelectorAll('.semester-content');
+
+        semesterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetSemester = button.getAttribute('data-semester');
+                
+                // Remove active class from all buttons
+                semesterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'border-primary', 'text-primary');
+                    btn.classList.add('border-transparent', 'text-neutral-700', 'dark:text-neutral-200');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'border-primary', 'text-primary');
+                button.classList.remove('border-transparent', 'text-neutral-700', 'dark:text-neutral-200');
+                
+                // Hide all semester contents
+                semesterContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show target semester content
+                document.getElementById(targetSemester + '-content').classList.remove('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

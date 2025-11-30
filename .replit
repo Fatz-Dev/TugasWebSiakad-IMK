@@ -40,7 +40,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd edlink-krs && npm run dev"
+args = "cd HTML-CSS-JS-Auto-Refresh.zip && npm run dev"
 waitForPort = 5000
 
 [workflows.workflow.metadata]

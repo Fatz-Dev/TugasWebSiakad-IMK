@@ -1534,7 +1534,7 @@
                             <span>Ditambahkan</span>
                         `;
                         button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
-                        button.classList.add('bg-success', 'cursor-not-allowed');
+                        button.classList.add('bg-gray-200', 'cursor-not-allowed');
                         button.disabled = true;
                     }
                 }
@@ -1585,7 +1585,6 @@
                         if (addCourseToKRS(courseData)) {
                             // Update button
                             this.innerHTML = `
-                                <span class="material-symbols-outlined text-base">check</span>
                                 <span>Ditambahkan</span>
                             `;
                             this.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');

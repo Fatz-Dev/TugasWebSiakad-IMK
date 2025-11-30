@@ -1530,11 +1530,10 @@
                     const isAdded = savedKRS.find(course => course.kode === kode);
                     if (isAdded) {
                         button.innerHTML = `
-                            <span class="material-symbols-outlined text-base">check</span>
                             <span>Ditambahkan</span>
                         `;
-                        button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
-                        button.classList.add('bg-gray-200', 'cursor-not-allowed');
+                        button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer', 'text-white');
+                        button.classList.add('bg-gray-200', 'text-gray-700', 'cursor-not-allowed');
                         button.disabled = true;
                     }
                 }
@@ -1583,12 +1582,12 @@
 
                         // Add to KRS
                         if (addCourseToKRS(courseData)) {
-                            // Update button
+                            // Update button to match the image style
                             this.innerHTML = `
                                 <span>Ditambahkan</span>
                             `;
-                            this.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
-                            this.classList.add('bg-success', 'cursor-not-allowed');
+                            this.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer', 'text-white');
+                            this.classList.add('bg-gray-200', 'text-gray-700', 'cursor-not-allowed');
                             this.disabled = true;
 
                             // Update kuota in the table
@@ -1651,11 +1650,10 @@
 
                                 if (addCourseToKRS(courseData)) {
                                     button.innerHTML = `
-                                        <span class="material-symbols-outlined text-base">check</span>
                                         <span>Ditambahkan</span>
                                     `;
-                                    button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer');
-                                    button.classList.add('bg-success', 'cursor-not-allowed');
+                                    button.classList.remove('bg-primary', 'hover:bg-primary/90', 'cursor-pointer', 'text-white');
+                                    button.classList.add('bg-gray-200', 'text-gray-700', 'cursor-not-allowed');
                                     button.disabled = true;
 
                                     cells[6].textContent = `${terisi + 1}/${total}`; // Adjusted index
